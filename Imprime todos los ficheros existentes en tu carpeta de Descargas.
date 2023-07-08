@@ -1,0 +1,9 @@
+import os
+
+# Establece el directorio desde el que quieres empezar
+dir_path = os.path.expanduser('~/Downloads')
+
+for filename in os.listdir(dir_path):
+    file_path = os.path.join(dir_path, filename)
+    if os.path.isfile(file_path):
+        print(filename)
